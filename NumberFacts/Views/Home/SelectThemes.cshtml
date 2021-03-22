@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Select Themes";
+}
+<h2>Choose from the below themes and insert a number or a date</h2>
+<div class="math-theme">
+    <button class="theme-button">Math</button>
+</div>
+<div class="fact-theme">
+    <button class="theme-button" type="button" data-toggle="ajax-modal" data-target="#exampleModal"
+            data-url="@UrlHelperExtensions.Action("Number Facts")">Number Facts</button>
+</div>
+<div class="date-theme">
+    <button class="theme-button">Hystorical Dates</button>
+</div>
+
+<div class="modal-body">
+    <form>
+        <div class="form-group">
+            <label>Insert a number</label>
+            <input type="number" placeholder="number" id="number" />
+        </div>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button value="Close" data-dismiss="modal" id="close">Close</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqery/1.11.3/jqery.min.js"></script>
+<script src="js/bootstrap.js"></script>
+ 
+
+<style type="text/css">
+    .math-theme {
+        align-content: center;
+        text-align: center;
+        background-color: #ddd;
+        border: none;
+        color: black;
+        padding: 60px 65px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+    }
+
+    .fact-theme {
+        align-content: center;
+        text-align: center;
+        background-color: #ddd;
+        border: none;
+        color: black;
+        padding: 60px 65px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+    }
+
+    .date-theme {
+        align-content: center;
+        text-align: center;
+        background-color: #ddd;
+        border: none;
+        color: black;
+        padding: 60px 65px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition: 0.3s;
+    }
+
+    .math-theme:hover {
+        background-color: #158477;
+        color: white;
+    }
+
+    .fact-theme:hover {
+        background-color: #B7E070;
+        color: white;
+    }
+
+    .date-theme:hover {
+        background-color: #DF0AAB;
+        color: white;
+    }
+
+    .theme-button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        border-radius: 12px;
+    }
+</style>
